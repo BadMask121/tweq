@@ -1,6 +1,7 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var app = express();
+import express from "express";
+import bodyParser from "body-parser";
+
+const app = express();
 app.set("port", process.env.PORT || 5000);
 
 app.use(express.static(__dirname + "/public"));
@@ -28,6 +29,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // 		response.send("Error: crc_token missing from request.");
 // 	}
 // });
+
+app.get("/webhooks/twitter", (request, response) => {
+	return response.send({
+		info: "Hello",
+	});
+});
 
 app.listen(app.get("port"), function() {
 	console.log("Node app is running on port", app.get("port"));
