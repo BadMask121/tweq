@@ -1,0 +1,39 @@
+{
+	"name": "tweq",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsc --watch",
+		"start": "npm run serve",
+		"serve": "nodemon dist/index.js",
+		"test": "mocha --timeout 40000 --watch test/*.js || true"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BadMask121/tweq.git"
+	},
+	"author": "Emakpor Jeffrey",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/BadMask121/tweq/issues"
+	},
+	"homepage": "https://github.com/BadMask121/tweq#readme",
+	"devDependencies": {
+		"@types/chai": "^4.2.9",
+		"@types/mocha": "^7.0.1",
+		"@types/node": "^13.7.1",
+		"chai": "^4.2.0",
+		"mocha": "^7.0.1",
+		"ts-node": "^8.6.2",
+		"ts-node-dev": "^1.0.0-pre.44",
+		"tslint": "^6.0.0",
+		"typescript": "^3.7.5"
+	},
+	"dependencies": {
+		"firebase-admin": "^8.9.2",
+		"firebase-functions": "^3.3.0",
+		"nodemon": "^2.0.2",
+		"twit": "^2.2.11"
+	}
+}
